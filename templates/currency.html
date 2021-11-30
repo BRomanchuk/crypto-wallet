@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>{{ data.currency }}</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>{{ data.currency }}</h1>
+    <span>{{ data.amount }}</span>
+    <p>{{ data.address }}</p>
+
+    <br>
+
+    <h3>Send my {{ data.currency }}</h3>
+    <form action="" method="POST">
+        <span>
+            <label for="receiver">Address</label>
+            <input type="text" name="receiver">
+        </span>
+        <span>
+            <label for="amount">Amount</label>
+            <input type="password" name="amount">
+        </span>
+        <p>
+            <input type="submit" value="send!">
+        </p>
+    </form>
+</div>
+{% endblock %}
