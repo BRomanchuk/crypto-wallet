@@ -1,4 +1,6 @@
 from flask import render_template, url_for, request, redirect
+from config import currencies
+from crypto import get_balance, validate_address
 
 
 def start_page():
@@ -6,10 +8,10 @@ def start_page():
 
 
 def render_currency(currency):
-    address = 'address'
-    amount = 0
+    address = validate_address(currencies[currency]['address'])
+    amount = float(get_balance(address))
     data = {
-        'currency': currency,
+        'currency': currency.upper(),
         'address': address,
         'amount': amount
     }
