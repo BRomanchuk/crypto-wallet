@@ -32,3 +32,44 @@ td {
 .form {
     margin-top: 20px;
 }
+
+.submit {
+    height: 30px;
+    width: 70px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: white;
+    color: black;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+}
+
+.submit:hover {
+    background: black;
+    color: white;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+}
+
+input{
+    height: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+#input-address {
+    width: 45%;
+    margin-right: 10px;
+}
+
+#input-amount {
+    width: 17%;
+}
+
+a {
+    text-decoration: none;
+}

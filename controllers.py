@@ -8,15 +8,11 @@ def start_page():
 
 
 def render_currency(currency):
-    address = validate_address(currencies[currency]['address'])
-    amount = float(get_balance(address))
+    address = validate_address(currency, currencies[currency]['address'])
+    amount = float(get_balance(currency, address))
     data = {
         'currency': currency.upper(),
         'address': address,
         'amount': amount
     }
     return render_template('currency.html', data=data)
-
-
-
-

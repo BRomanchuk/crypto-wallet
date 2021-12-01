@@ -12,7 +12,7 @@ def index():
 @app.route("/<string:curr>", methods=['GET'])
 def currency(curr):
     if curr.lower() not in ['btc', 'eth']:
-        return 404
+        return 'not found', 404
     return render_currency(curr), 200
 
 
