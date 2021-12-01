@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Crypto Wallet</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1>Operation successful</h1>
+    <p>For more info click <a href="https://ropsten.etherscan.io/tx/0x{{ data }}">here</a></p>
+    <p style="font-size: small; color: gray">Transaction hash: {{ data }}</p>
+
+    <br>
+
+    <p><b><a href="../eth">ETH</a></b></p>
+    <p><b><a href="../btc">BTC</a></b></p>
+</div>
+{% endblock %}

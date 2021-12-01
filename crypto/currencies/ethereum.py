@@ -27,4 +27,5 @@ class Ethereum:
         }
         signed_tx = self.web.eth.account.signTransaction(tx, currencies['eth']['private'])
         tx_hash = self.web.eth.sendRawTransaction(signed_tx.rawTransaction)
-        return 'Success', 200
+        tx_dict = dict(self.web.eth.get_transaction(tx_hash))
+        return bytes.hex(tx_dict['hash'])

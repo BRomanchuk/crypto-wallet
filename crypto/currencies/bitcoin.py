@@ -10,4 +10,4 @@ class Bitcoin:
         return address
 
     def transfer(self, receiver, amount):
-        return 'Success', 200
+        return 'hash'

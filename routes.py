@@ -1,6 +1,6 @@
 from flask import current_app as app
 from flask import request
-from controllers import start_page, render_currency
+from controllers import start_page, render_currency, render_success
 from crypto import transfer
 
 
@@ -20,4 +20,5 @@ def currency(curr):
 def my_form_post():
     receiver = request.form.get('receiver')
     amount = request.form.get('amount')
-    return transfer(receiver, amount)
+    tx_hash = transfer('eth', receiver, amount)
+    return render_success(tx_hash), 200

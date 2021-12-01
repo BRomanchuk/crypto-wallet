@@ -20,11 +20,17 @@
         </span>
         <span>
             <label for="amount">Amount</label>
-            <input id="input-amount" type="number" name="amount" step="0.001">
+            <input id="input-amount" type="number" name="amount" min=0 max={{ data.amount }} step="0.001">
         </span>
         <p>
             <center><input class="submit" type="submit" value="Send"></center>
         </p>
+
+        <br>
+
+        {% if data.currency == 'ETH' %}
+        <p><a href="https://ropsten.etherscan.io/address/{{ data.address }}">📜 History of transactions</a></p>
+        {% endif %}
     </form>
 </div>
 {% endblock %}

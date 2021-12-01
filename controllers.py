@@ -16,3 +16,8 @@ def render_currency(currency):
         'amount': amount
     }
     return render_template('currency.html', data=data)
+
+
+def render_success(tx_hash):
+    data = str(tx_hash)
+    return render_template('transaction.html', data=data)
